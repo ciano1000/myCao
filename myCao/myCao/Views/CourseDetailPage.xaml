@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:adview="clr-namespace:myCao.Controls"
+             xmlns:imgBut="clr-namespace:Flex.Controls;assembly=Flex"
+             x:Class="myCao.Views.CourseDetailPage"
+             Title="Course Detail Page">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS">0,20,0,0</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <RelativeLayout Grid.Row="0" CompressedLayout.IsHeadless="True">
+            <BoxView x:Name="boxview" Color="#f2f2f2"
+                RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.3}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}"/>
+
+            <StackLayout  Padding="15,0,15,0"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression
+                Type=RelativeToParent,Property=Width,Factor=1}"              
+                   RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToView,Property=Height,ElementName=boxview,Factor=0.3}">
+                <Label Text="{Binding CourseTitle}" TextColor = "#33353a" FontSize="20" FontAttributes="Bold" LineBreakMode="TailTruncation" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout  HorizontalOptions="Center" VerticalOptions="Center" 
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}"
+                     RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=boxview,
+            Property=Height,
+            Factor=1,Constant=-50}">
+                <imgBut:FlexButton  HeightRequest="100" WidthRequest="100" CornerRadius="50"  Icon="{Binding Icon}" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a"/>
+            </StackLayout>
+            <StackLayout x:Name="details" Orientation="Horizontal" Padding="20,30,20,30" BackgroundColor="#1695A3"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression
+                Type=RelativeToParent,Property=Width,Factor=1}"
+                         RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToView,Property=Height,ElementName=boxview,Factor=1,Constant=100}">
+                <Label  Text="{Binding Points, StringFormat='Points: {0}'}" HorizontalOptions="StartAndExpand" TextColor = "White" FontSize="17" FontAttributes="Bold"/>
+                <Label  Text="{Binding CourseCode, StringFormat='Code: {0}'}" HorizontalOptions="CenterAndExpand" TextColor = "White" FontSize="17"  FontAttributes="Bold"/>
+                <Label Text="{Binding CourseLevel, StringFormat='Level: {0}'}" HorizontalOptions="EndAndExpand" TextColor = "White" FontSize="17"  FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout 
+                               RelativeLayout.WidthConstraint="{ConstraintExpression
+                Type=RelativeToParent,Property=Width,Factor=1}"
+                               RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToView,Property=Y,ElementName=details,Factor=1,Constant=100}">
+                <imgBut:FlexButton Clicked="Online_Clicked" HorizontalOptions="Center" HeightRequest="40" CornerRadius="20" Text="View More Online" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a"/>
+            </StackLayout>
+        </RelativeLayout>
+
+        <adview:AdControlView x:Name="ads" Grid.Row="1" BackgroundColor="Red" AdUnitID ="3" />
+    </Grid>
+
+</ContentPage>

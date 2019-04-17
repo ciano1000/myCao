@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:myCao"
+             x:Class="myCao.Views.MainPage"            
+             
+              xmlns:imgBut ="clr-namespace:Flex.Controls;assembly=Flex"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:adview ="clr-namespace:myCao.Controls;assembly=myCao" >
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <!-- <On Platform="iOS">0,20,0,0</On>-->
+        </OnPlatform>
+    </ContentPage.Padding>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <RelativeLayout Grid.Row="0" CompressedLayout.IsHeadless="True">
+        <BoxView Color="#f2f2f2"
+                RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.3}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}"/>
+            <StackLayout  HorizontalOptions="Center" VerticalOptions="Center" 
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.3}">
+            <Label Text="myCao" TextColor = "#33353a" FontSize="40" FontAttributes="Bold"/>
+            <imgBut:FlexButton Clicked="AdsRemove_Clicked" HeightRequest="40" CornerRadius="20" Text="Remove Ads" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a"/>
+        </StackLayout>
+            <StackLayout Orientation="Horizontal"  x:Name="buttons" RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}"
+                     RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToParent,           
+            Property=Height,
+            Factor=0.5
+            }" Padding="15">
+
+                <imgBut:FlexButton x:Name="but1" HeightRequest="90" WidthRequest="90" CornerRadius="45" HorizontalOptions="StartAndExpand" Text="Calc" IconOrientation="Left"    Icon="calculator.png" ForegroundColor="White" HighlightForegroundColor="#f2f2f2" BackgroundColor="#1695A3" HighlightBackgroundColor="#0f6f7a" BorderThickness="0" Padding="0" Clicked="Calculator_Clicked"/>
+
+                <imgBut:FlexButton x:Name="but2" HeightRequest="90" WidthRequest="90" CornerRadius="45" HorizontalOptions="CenterAndExpand" Text="Find" IconOrientation="Left"   Icon="search.png" ForegroundColor="White" HighlightForegroundColor="#f2f2f2" BackgroundColor="#1695A3" HighlightBackgroundColor="#0f6f7a" BorderThickness="0" Padding="0" Clicked="Search_Clicked"/>
+
+
+                <imgBut:FlexButton x:Name="but3" HeightRequest="90" WidthRequest="90" CornerRadius="45" HorizontalOptions="EndAndExpand" Text="Fav" IconOrientation="Left"   Icon="fav.png" ForegroundColor="#d90101" HighlightForegroundColor="#f2f2f2" BackgroundColor="#1695A3" HighlightBackgroundColor="#0f6f7a" BorderThickness="0" Padding="0" Clicked="Fav_Clicked"/>
+                
+            </StackLayout>
+            <StackLayout x:Name="help" RelativeLayout.WidthConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Width,
+                Factor=1}"
+         
+                         RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToView,
+                ElementName=buttons,
+                Property=Y,
+                Factor=1,Constant= 130}">
+                <ContentView  Padding="5" BackgroundColor="#1695A3">
+                    <Label  TextColor="White" Text="Welcome to myCao! Calculator will help you calculate your CAO points, Find is where you can find the right course for you and Favourites is where you can view course's you've saved for later!"/>
+                </ContentView>
+               
+                <imgBut:FlexButton Text="Ok" HeightRequest="35" WidthRequest="60" CornerRadius="20" HorizontalOptions="Center" ForegroundColor="White" HighlightForegroundColor="#f2f2f2" BackgroundColor="#1695A3" HighlightBackgroundColor="#0f6f7a" Clicked="Ok_Clicked"/>
+            </StackLayout>
+            
+    </RelativeLayout>
+        <adview:AdControlView x:Name="ads" Grid.Row="1" BackgroundColor="Red" AdUnitID ="1" />
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCao.Views.FavouritesPage"
+             xmlns:imgBut ="clr-namespace:Flex.Controls;assembly=Flex"
+              xmlns:adview ="clr-namespace:myCao.Controls;assembly=myCao"
+             Title="Favourites">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS">0,20,0,0</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <AbsoluteLayout>
+    <Grid AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="SizeProportional">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <ListView Grid.Row="0" x:Name="courseListView" HasUnevenRows="True" CachingStrategy="RecycleElementAndDataTemplate" ItemSelected="courseListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10,10,5,10">
+                            <imgBut:FlexButton HeightRequest="30" WidthRequest="30" CornerRadius="15"  Icon="{Binding Icon}" ForegroundColor="#1695A3" 
+                                           HighlightForegroundColor="#f2f2f2" BackgroundColor="White" HighlightBackgroundColor="#0f6f7a" BorderThickness="0" Padding="0" HorizontalOptions="Start" MinimumHeightRequest="20" MinimumWidthRequest="20"/>
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding CourseTitle}" TextColor="Black" FontSize="12" LineBreakMode="TailTruncation"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Points, StringFormat='Points: {0}'}" HorizontalOptions="Start"/>
+                                    <Label Text="{Binding CourseCode, StringFormat='Code:{0}'}" HorizontalOptions="CenterAndExpand"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <Button Text="Remove" TextColor="#ed1010" BackgroundColor="Transparent" BorderColor="Transparent" WidthRequest="80" HorizontalOptions="End" Clicked="Delete_Clicked"
+                                CommandParameter="{Binding .}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <adview:AdControlView x:Name="ads" Grid.Row="1" BackgroundColor="Red" AdUnitID="4"/>
+    </Grid>
+        <ContentView x:Name="help" IsVisible="False" AbsoluteLayout.LayoutBounds="0,0.5,1,0.2" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#1695A3" Padding="10,30,10,10">
+            <Label   TextColor="White" Text="Once you like a course you find, it will appear here, you haven't liked any yet!"/>
+        </ContentView>
+        
+    </AbsoluteLayout>
+</ContentPage> 

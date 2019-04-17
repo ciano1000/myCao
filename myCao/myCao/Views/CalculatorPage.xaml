@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:imgBut="clr-namespace:Flex.Controls;assembly=Flex"
+             xmlns:adview="clr-namespace:myCao.Controls"
+             x:Class="myCao.Views.CalculatorPage"
+             Title="Calculator">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0, 20, 0, 0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <RelativeLayout Grid.Row="0">
+        <BoxView Color="#f2f2f2" x:Name="banner"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.3}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}"/>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.3}">
+            <Label x:Name="points" Text="0 points" TextColor = "#33353a" FontSize="40" FontAttributes="Bold"/>
+            <imgBut:FlexButton HeightRequest="40"  CornerRadius="20" Text="Reset" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Reset_Clicked"/>
+        </StackLayout>
+        <!--Grid picker picker-->
+        <Grid x:Name="picker" IsVisible="False" ColumnSpacing="0" 
+            RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}"
+              RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=banner,
+            Property=Height,
+            Factor=1,
+            Constant=0}">
+            <imgBut:FlexButton Grid.Row="0" Grid.Column="0" HeightRequest="70" Text="Higher" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#116f7a" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Higher_Clicked"/>
+            <imgBut:FlexButton Grid.Row="0" Grid.Column="1" HeightRequest="70" Text="Ordinary" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#116f7a" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Ordinary_Clicked"/>
+            <imgBut:FlexButton Grid.Row="0" Grid.Column="2" HeightRequest="70" Text="LCVP" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#116f7a" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="LCVP_Clicked"/>
+        </Grid>
+        <!-- Maths level picker-->
+        <StackLayout  x:Name="mathsPicker"  IsVisible="True" 
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}"
+                     RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=banner,
+            Property=Height,
+            Factor=1,
+            Constant=80}">
+            <Label Text="Higher Level Maths" FontSize="40" FontAttributes="Bold" TextColor="#33353a" HorizontalOptions="Center"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <imgBut:FlexButton Padding="10" FontSize="18" HorizontalOptions="Center" HeightRequest="80"  WidthRequest="160" CornerRadius="20" Text="Yes" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="MathsYes_Clicked"/>
+                <imgBut:FlexButton Padding="10" FontSize="18" HorizontalOptions="Center" HeightRequest="80"  WidthRequest="160" CornerRadius="20" Text="No" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="MathsNo_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+        <!--grade picker grid-->
+            <Grid x:Name="gradePicker" IsVisible="False" Padding="10"  ColumnSpacing="10" RowSpacing="20"
+              RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}"
+                     RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=banner,
+            Property=Height,
+            Factor=1,
+            Constant=60}">
+                <imgBut:FlexButton x:Name="One" Grid.Row="0" Grid.Column="0" HeightRequest="70" WidthRequest="70" Text="H1" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Grade_Clicked"/>
+                <imgBut:FlexButton x:Name="Two" Grid.Row="0" Grid.Column="1" HeightRequest="70" WidthRequest="70" Text="H2" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Grade_Clicked"/>
+                <imgBut:FlexButton x:Name="Three" Grid.Row="0" Grid.Column="2" HeightRequest="70" WidthRequest="70" Text="H3" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Grade_Clicked"/>
+                <imgBut:FlexButton x:Name="Four" Grid.Row="1" Grid.Column="0" HeightRequest="70" WidthRequest="70" Text="H4" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Grade_Clicked" />
+                <imgBut:FlexButton x:Name="Five" Grid.Row="1" Grid.Column="1" HeightRequest="70" WidthRequest="70" Text="H5" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Grade_Clicked"/>
+                <imgBut:FlexButton x:Name="Six" Grid.Row="1" Grid.Column="2" HeightRequest="70" WidthRequest="70" Text="H6" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Grade_Clicked"/>
+                <imgBut:FlexButton x:Name="Seven" Grid.Row="2" Grid.Column="0" HeightRequest="70" WidthRequest="70" Text="H7" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Grade_Clicked"/>
+                <imgBut:FlexButton x:Name="Eight" Grid.Row="2" Grid.Column="2" HeightRequest="70" WidthRequest="70" Text="H8" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Grade_Clicked"/>
+
+            </Grid>
+        </RelativeLayout>
+        <adview:AdControlView x:Name="ads" Grid.Row="1" BackgroundColor="Red" AdUnitID="2" />
+    </Grid>
+</ContentPage>

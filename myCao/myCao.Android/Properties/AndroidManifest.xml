@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest android:installLocation="auto" package="com.comhar.myCao" android:versionName="1.07" xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="8">
+	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="27" />
+	<application android:icon="@drawable/icon" android:debuggable="false" android:label="myCao">
+		<meta-data android:value="@integer/google_play_services_version" android:name="com.google.android.gms.version" />
+		<activity android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+		<meta-data android:name="com.sec.android.support.multiwindow" android:value="false" />
+		<meta-data android:name="com.samsung.android.sdk.multiwindow.multiinstance.enable" android:value="false" />
+		<meta-data android:name="com.samsung.android.sdk.multiwindow.penwindow.enable" android:value="false" />
+	</application>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="com.android.vending.BILLING" />
+</manifest>

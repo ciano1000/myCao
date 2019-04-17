@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="myCao.Views.SearchResults"
+             xmlns:imgBut ="clr-namespace:Flex.Controls;assembly=Flex"
+             Title="Search Results">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS">0,20,0,0</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ListView x:Name="courseListView" HasUnevenRows="True" ItemSelected="courseListView_ItemSelected" CachingStrategy="RecycleElementAndDataTemplate">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <imgBut:FlexButton HeightRequest="30" WidthRequest="30" CornerRadius="15"  Icon="{Binding Icon}" ForegroundColor="#1695A3" 
+                                           HighlightForegroundColor="#f2f2f2" BackgroundColor="White" HighlightBackgroundColor="#0f6f7a" BorderThickness="0" Padding="0" HorizontalOptions="Start" MinimumHeightRequest="20" MinimumWidthRequest="20"/>
+                        <StackLayout HorizontalOptions="StartAndExpand">
+                            <Label Text="{Binding CourseTitle}" TextColor="Black" FontSize="12" LineBreakMode="TailTruncation"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Points, StringFormat='Points: {0}'}" HorizontalOptions="Start"/>
+                                <Label Text="{Binding CourseCode, StringFormat='Code:{0}'}" HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <Button  BackgroundColor="Transparent" BorderColor="Transparent" HorizontalOptions="End" Clicked="Like_Clicked"
+                                CommandParameter="{Binding .}" >
+
+                            <Button.Triggers>
+                                <DataTrigger TargetType="Button" Binding="{Binding Fav}" Value="false">
+                                    <Setter Property="Text" Value="Like"/>
+                                    <Setter Property="TextColor" Value="#1695A3"/>
+                                    <Setter Property="WidthRequest" Value="80"/>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Button" Binding="{Binding Fav}" Value="true">
+                                    <Setter Property="Text" Value="Remove"/>
+                                    <Setter Property="TextColor" Value="#ed1010"/>
+                                    <Setter Property="WidthRequest" Value="80"/>
+                                </DataTrigger>
+                            </Button.Triggers>
+                        </Button>
+                                
+                         
+                               
+                    </StackLayout>
+                </ViewCell>
+                
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage> 
