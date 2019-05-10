@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="myCao.Views.FavouritesPage"
@@ -39,7 +39,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <adview:AdControlView x:Name="ads" Grid.Row="1" BackgroundColor="Red" AdUnitID="4"/>
+        <adview:AdControlView x:Name="ads" Grid.Row="1" BackgroundColor="Transparent" AdUnitID="4"/>
     </Grid>
         <ContentView x:Name="help" IsVisible="False" AbsoluteLayout.LayoutBounds="0,0.5,1,0.2" AbsoluteLayout.LayoutFlags="All" BackgroundColor="#1695A3" Padding="10,30,10,10">
             <Label   TextColor="White" Text="Once you like a course you find, it will appear here, you haven't liked any yet!"/>

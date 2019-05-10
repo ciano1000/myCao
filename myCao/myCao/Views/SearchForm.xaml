@@ -54,7 +54,7 @@
             <ContentView Padding="5" BackgroundColor="#1695A3">
                 <Label   TextColor="White" Text="This is the Find page, search via text, your favourite 3 school subjects, a points range or any mix of all of the above!"/>
             </ContentView>
-            <imgBut:FlexButton Text="Ok" HeightRequest="35" WidthRequest="60" CornerRadius="15" HorizontalOptions="Center" ForegroundColor="White" HighlightForegroundColor="#f2f2f2" BackgroundColor="#1695A3" HighlightBackgroundColor="#0f6f7a" Clicked="Ok_Clicked"/>
+            <imgBut:FlexButton Text="Ok" HeightRequest="36" WidthRequest="60" CornerRadius="12" HorizontalOptions="Center" ForegroundColor="White" HighlightForegroundColor="#f2f2f2" BackgroundColor="#1695A3" HighlightBackgroundColor="#0f6f7a" Clicked="Ok_Clicked"/>
         </StackLayout>
         <StackLayout Padding="50,0,50,0" VerticalOptions="EndAndExpand">
             <imgBut:FlexButton Clicked="Search_Clicked" HeightRequest="45" WidthRequest="30" CornerRadius="20" Text="Search" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" />

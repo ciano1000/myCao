@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:myCao"
@@ -73,11 +73,11 @@
                     <Label  TextColor="White" Text="Welcome to myCao! Calculator will help you calculate your CAO points, Find is where you can find the right course for you and Favourites is where you can view course's you've saved for later!"/>
                 </ContentView>
                
-                <imgBut:FlexButton Text="Ok" HeightRequest="35" WidthRequest="60" CornerRadius="20" HorizontalOptions="Center" ForegroundColor="White" HighlightForegroundColor="#f2f2f2" BackgroundColor="#1695A3" HighlightBackgroundColor="#0f6f7a" Clicked="Ok_Clicked"/>
+                <imgBut:FlexButton Text="Ok" HeightRequest="36" WidthRequest="60" CornerRadius="12" HorizontalOptions="Center" ForegroundColor="White" HighlightForegroundColor="#f2f2f2" BackgroundColor="#1695A3" HighlightBackgroundColor="#0f6f7a" Clicked="Ok_Clicked"/>
             </StackLayout>
             
     </RelativeLayout>
-        <adview:AdControlView x:Name="ads" Grid.Row="1" BackgroundColor="Red" AdUnitID ="1" />
+        <adview:AdControlView x:Name="ads" Grid.Row="1" BackgroundColor="Transparent" AdUnitID ="1" />
     </Grid>
 
 </ContentPage>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:imgBut="clr-namespace:Flex.Controls;assembly=Flex"
@@ -51,9 +51,9 @@
             Property=Height,
             Factor=1,
             Constant=0}">
-            <imgBut:FlexButton Grid.Row="0" Grid.Column="0" HeightRequest="70" Text="Higher" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#116f7a" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Higher_Clicked"/>
-            <imgBut:FlexButton Grid.Row="0" Grid.Column="1" HeightRequest="70" Text="Ordinary" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#116f7a" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Ordinary_Clicked"/>
-            <imgBut:FlexButton Grid.Row="0" Grid.Column="2" HeightRequest="70" Text="LCVP" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#116f7a" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="LCVP_Clicked"/>
+            <imgBut:FlexButton Grid.Row="0" Grid.Column="0" HeightRequest="70" FontSize="16" Text="Higher" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#116f7a" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Higher_Clicked"/>
+            <imgBut:FlexButton Grid.Row="0" Grid.Column="1" HeightRequest="70" FontSize="16" Text="Ordinary" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#116f7a" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="Ordinary_Clicked"/>
+            <imgBut:FlexButton Grid.Row="0" Grid.Column="2" HeightRequest="70" FontSize="16" Text="LCVP" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#116f7a" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="LCVP_Clicked"/>
         </Grid>
         <!-- Maths level picker-->
         <StackLayout  x:Name="mathsPicker"  IsVisible="True" 
@@ -67,7 +67,7 @@
             Property=Height,
             Factor=1,
             Constant=80}">
-            <Label Text="Higher Level Maths" FontSize="40" FontAttributes="Bold" TextColor="#33353a" HorizontalOptions="Center"/>
+            <Label Margin="20,0,20,0" Text="Higher Level Maths" FontSize="35" FontAttributes="Bold" TextColor="#33353a" HorizontalOptions="Center"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <imgBut:FlexButton Padding="10" FontSize="18" HorizontalOptions="Center" HeightRequest="80"  WidthRequest="160" CornerRadius="20" Text="Yes" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="MathsYes_Clicked"/>
                 <imgBut:FlexButton Padding="10" FontSize="18" HorizontalOptions="Center" HeightRequest="80"  WidthRequest="160" CornerRadius="20" Text="No" FontAttributes="Bold" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" Clicked="MathsNo_Clicked"/>
@@ -96,6 +96,6 @@
 
             </Grid>
         </RelativeLayout>
-        <adview:AdControlView x:Name="ads" Grid.Row="1" BackgroundColor="Red" AdUnitID="2" />
+        <adview:AdControlView x:Name="ads" Grid.Row="1" BackgroundColor="Transparent" AdUnitID="2" />
     </Grid>
 </ContentPage>
