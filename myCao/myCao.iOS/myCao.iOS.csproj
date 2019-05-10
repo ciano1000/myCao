@@ -100,6 +100,75 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\myCao.db" />
+    <BundleResource Include="Resources\agriculture.png" />
+    <BundleResource Include="Resources\agriculture%402x.png" />
+    <BundleResource Include="Resources\agriculture%403x.png" />
+    <BundleResource Include="Resources\architecture.png" />
+    <BundleResource Include="Resources\architecture%402x.png" />
+    <BundleResource Include="Resources\architecture%403x.png" />
+    <BundleResource Include="Resources\art.png" />
+    <BundleResource Include="Resources\art%402x.png" />
+    <BundleResource Include="Resources\art%403x.png" />
+    <BundleResource Include="Resources\biology.png" />
+    <BundleResource Include="Resources\biology%402x.png" />
+    <BundleResource Include="Resources\biology%403x.png" />
+    <BundleResource Include="Resources\business.png" />
+    <BundleResource Include="Resources\business%402x.png" />
+    <BundleResource Include="Resources\business%403x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\education.png" />
+    <BundleResource Include="Resources\education%402x.png" />
+    <BundleResource Include="Resources\education%403x.png" />
+    <BundleResource Include="Resources\engineering.png" />
+    <BundleResource Include="Resources\engineering%402x.png" />
+    <BundleResource Include="Resources\engineering%403x.png" />
+    <BundleResource Include="Resources\health.png" />
+    <BundleResource Include="Resources\health%402x.png" />
+    <BundleResource Include="Resources\health%403x.png" />
+    <BundleResource Include="Resources\humanity.png" />
+    <BundleResource Include="Resources\humanity%402x.png" />
+    <BundleResource Include="Resources\humanity%403x.png" />
+    <BundleResource Include="Resources\icon.png" />
+    <BundleResource Include="Resources\icon%402x.png" />
+    <BundleResource Include="Resources\icon%403x.png" />
+    <BundleResource Include="Resources\icons.png" />
+    <BundleResource Include="Resources\it.png" />
+    <BundleResource Include="Resources\it%402x.png" />
+    <BundleResource Include="Resources\it%403x.png" />
+    <BundleResource Include="Resources\journalism.png" />
+    <BundleResource Include="Resources\journalism%402x.png" />
+    <BundleResource Include="Resources\journalism%403x.png" />
+    <BundleResource Include="Resources\language.png" />
+    <BundleResource Include="Resources\language%402x.png" />
+    <BundleResource Include="Resources\language%403x.png" />
+    <BundleResource Include="Resources\law.png" />
+    <BundleResource Include="Resources\law%402x.png" />
+    <BundleResource Include="Resources\law%403x.png" />
+    <BundleResource Include="Resources\math.png" />
+    <BundleResource Include="Resources\math%402x.png" />
+    <BundleResource Include="Resources\math%403x.png" />
+    <BundleResource Include="Resources\science.png" />
+    <BundleResource Include="Resources\science%402x.png" />
+    <BundleResource Include="Resources\science%403x.png" />
+    <BundleResource Include="Resources\service.png" />
+    <BundleResource Include="Resources\service%402x.png" />
+    <BundleResource Include="Resources\service%403x.png" />
+    <BundleResource Include="Resources\social.png" />
+    <BundleResource Include="Resources\social%402x.png" />
+    <BundleResource Include="Resources\social%403x.png" />
+    <BundleResource Include="Resources\transport.png" />
+    <BundleResource Include="Resources\transport%402x.png" />
+    <BundleResource Include="Resources\transport%403x.png" />
+    <BundleResource Include="Resources\veterinary.png" />
+    <BundleResource Include="Resources\veterinary%402x.png" />
+    <BundleResource Include="Resources\veterinary%403x.png" />
+    <BundleResource Include="Resources\welfare.png" />
+    <BundleResource Include="Resources\welfare%402x.png" />
+    <BundleResource Include="Resources\welfare%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -176,7 +245,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\myCao\myCao.csproj">
-      <Project>{670D9DCE-9F0D-4F3E-A63C-300CAC23BC24}</Project>
+      <Project>{BAA79DC2-2C06-4216-BABA-CF453164F895}</Project>
       <Name>myCao</Name>
     </ProjectReference>
   </ItemGroup>

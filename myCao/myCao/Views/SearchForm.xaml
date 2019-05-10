@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="myCao.Views.SearchForm"
@@ -7,12 +7,12 @@
 
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
-            <!-- <On Platform="iOS">0,20,0,0</On>-->
+            <On Platform="iOS">0,0,0,20</On>
         </OnPlatform>
     </ContentPage.Padding>
 
     <StackLayout Padding="0,0,0,5">
-    <TableView Intent="Form" VerticalOptions="Start">
+    <TableView Intent="Form" VerticalOptions="Start" HeightRequest="450">
         <TableRoot>
             <TableSection>
                 <EntryCell Label="Search Text" x:Name="searchText" Placeholder="(e.g Business)"/>
@@ -50,12 +50,14 @@
             </TableSection>
         </TableRoot>
     </TableView>
-        <StackLayout x:Name="help" VerticalOptions="Start" >
+        <StackLayout x:Name="help" VerticalOptions="Start">
             <ContentView Padding="5" BackgroundColor="#1695A3">
                 <Label   TextColor="White" Text="This is the Find page, search via text, your favourite 3 school subjects, a points range or any mix of all of the above!"/>
             </ContentView>
             <imgBut:FlexButton Text="Ok" HeightRequest="35" WidthRequest="60" CornerRadius="15" HorizontalOptions="Center" ForegroundColor="White" HighlightForegroundColor="#f2f2f2" BackgroundColor="#1695A3" HighlightBackgroundColor="#0f6f7a" Clicked="Ok_Clicked"/>
         </StackLayout>
-        <imgBut:FlexButton Clicked="Search_Clicked" HeightRequest="45" WidthRequest="35" CornerRadius="20" Text="Search" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" />
+        <StackLayout Padding="50,0,50,0" VerticalOptions="EndAndExpand">
+            <imgBut:FlexButton Clicked="Search_Clicked" HeightRequest="45" WidthRequest="30" CornerRadius="20" Text="Search" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" />
+        </StackLayout>
     </StackLayout>
 </ContentPage>
