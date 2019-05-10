@@ -56,6 +56,6 @@
             </ContentView>
             <imgBut:FlexButton Text="Ok" HeightRequest="35" WidthRequest="60" CornerRadius="15" HorizontalOptions="Center" ForegroundColor="White" HighlightForegroundColor="#f2f2f2" BackgroundColor="#1695A3" HighlightBackgroundColor="#0f6f7a" Clicked="Ok_Clicked"/>
         </StackLayout>
-        <imgBut:FlexButton Clicked="Search_Clicked" HeightRequest="45" WidthRequest="70" CornerRadius="20" Text="Search" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" />
+        <imgBut:FlexButton Clicked="Search_Clicked" HeightRequest="45" WidthRequest="35" CornerRadius="20" Text="Search" ForegroundColor="#ffffff" BackgroundColor="#1695A3" HighlightForegroundColor="#f2f2f2" HighlightBackgroundColor="#0f6f7a" />
     </StackLayout>
 </ContentPage>

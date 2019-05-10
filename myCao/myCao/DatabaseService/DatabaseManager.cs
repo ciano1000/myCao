@@ -19,7 +19,6 @@ namespace myCao.DatabaseService
                 dbConnection = DependencyService.Get<IDBInterface>().CreateConnection("myCao");
             }
             
-            
         }
 
         public async Task UpdateAsync(object obj)
