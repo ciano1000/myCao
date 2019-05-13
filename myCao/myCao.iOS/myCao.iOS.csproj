@@ -314,4 +314,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\spotlight%402x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\loadingscreen%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\loadingscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\loadingscreen%402x.png" />
+  </ItemGroup>
 </Project>
