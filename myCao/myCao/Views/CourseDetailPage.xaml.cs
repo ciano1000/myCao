@@ -58,7 +58,7 @@ namespace myCao.Views
             if (showAd && showInter)
             {
                 DependencyService.Get<IAdInterstitial>().Give();
-                await Task.Delay(3000);
+                await Task.Delay(5000);
             }
             
             try

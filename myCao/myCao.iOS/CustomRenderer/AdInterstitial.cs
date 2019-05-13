@@ -19,30 +19,28 @@ namespace myCao.iOS.CustomRenderer
         
         public void Give()
         {
-            if (interstitialAd.IsReady)
-            {
-                interstitialAd.AdReceived += (sender, args) =>
-                {
-                    if (interstitialAd.IsReady)
-                    {
-                        var window = UIApplication.SharedApplication.KeyWindow;
-                        var vc = window.RootViewController;
-                        while (vc.PresentedViewController != null)
-                        {
-                            vc = vc.PresentedViewController;
-                        }
-                        interstitialAd.PresentFromRootViewController(vc);
-                    }
-                };
-            }
+            interstitialAd = new Interstitial(adUnit);
+            var request = Request.GetDefaultRequest();
+            request.SetLocation((nfloat)53.349804, (nfloat)(-6.260310), 1000);
+            interstitialAd.AdReceived += (sender, args) =>
+              {
+                  if (interstitialAd.IsReady)
+                  {
+                      var window = UIApplication.SharedApplication.KeyWindow;
+                      var vc = window.RootViewController;
+                      while (vc.PresentedViewController != null)
+                      {
+                          vc = vc.PresentedViewController;
+                      }
+                      interstitialAd.PresentFromRootViewController(vc);
+                  }
+              };
+            interstitialAd.LoadRequest(request);
         }
 
         public void ShowAd()
         {
-            interstitialAd = new Interstitial(adUnit);
-            var request = Request.GetDefaultRequest();
-            request.SetLocation((nfloat)53.349804, (nfloat)(-6.260310), 1000);
-            interstitialAd.LoadRequest(request);
+
         }
     }
 }
