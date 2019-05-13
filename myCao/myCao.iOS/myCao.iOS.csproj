@@ -174,7 +174,6 @@
     <BundleResource Include="Resources\mainICON.png" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
@@ -278,5 +277,41 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\search%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\spotlight%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\appIcon%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ipad1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ipad3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ipad5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ipad6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ipad7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\notification%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\notification%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\settings%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\settings%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\spotlight%402x.png" />
   </ItemGroup>
 </Project>
