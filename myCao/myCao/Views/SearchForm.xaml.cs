@@ -32,14 +32,14 @@ namespace myCao.Views
             _search = new Search();
             subject1 = new Subject();
             subject2 = new Subject();
-
+            
             subject3 = new Subject();
             isMaxSet = false;
             numNAN = false;
             isMinSet = false;
             subjectsEntered = false;
             subjectCount = 0;
-            if ((bool)Application.Current.Properties["FirstStart"] == false || (bool)Application.Current.Properties["SearchHelp"] ==false)
+            if ((bool)Application.Current.Properties["FirstStart"])
             {
                 help.IsVisible = false;
             }
@@ -210,7 +210,7 @@ namespace myCao.Views
         private void Ok_Clicked(object sender, EventArgs e)
         {
             help.IsVisible = false;
-            Application.Current.Properties["SearchHelp"] = false;
+            _displayHelp = false;
         }
     }
 }

@@ -40,6 +40,9 @@
     <MtouchArch>x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer: Cian Mc Sweeney (JV45X7BNMR)</CodesignKey>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -63,8 +66,10 @@
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer: Cian Mc Sweeney (JV45X7BNMR)</CodesignKey>
+    <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>MainCAOProfile</CodesignProvision>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
     <DebugType>none</DebugType>
@@ -177,45 +182,33 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
-      <Visible>false</Visible>
-    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LoadingScreen.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LoadingScreen.imageset\loadingscreen.png" />
+    <ImageAsset Include="Assets.xcassets\LoadingScreen.imageset\loadingscreen%402x.png" />
+    <ImageAsset Include="Assets.xcassets\LoadingScreen.imageset\loadingscreen%403x.png" />
+    <ImageAsset Include="Assets.xcassets\LoadingScreen.imageset\loadingscreen-1.png" />
+    <ImageAsset Include="Assets.xcassets\LoadingScreen.imageset\loadingscreen%402x-1.png" />
+    <ImageAsset Include="Assets.xcassets\LoadingScreen.imageset\loadingscreen%403x-1.png" />
+    <ImageAsset Include="Assets.xcassets\LoadingScreen.imageset\loadingscreen-2.png" />
+    <ImageAsset Include="Assets.xcassets\LoadingScreen.imageset\loadingscreen%402x-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\notification%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\notification%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\settings%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\settings%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\spotlight%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\spotlight%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\spotlight%403x-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\appIcon%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\notification%402x-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad3.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\settings%402x-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\notification%402x-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\spotlight%402x-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad5.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad6.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad7.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\mainICON.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -322,5 +315,11 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\loadingscreen%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\LoadingScreen.imageset\" />
   </ItemGroup>
 </Project>
